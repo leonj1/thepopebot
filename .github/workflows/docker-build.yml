@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     if: vars.IMAGE_URL != '' && startsWith(vars.IMAGE_URL, 'ghcr.io/')
     permissions:
       contents: read
